@@ -57,3 +57,73 @@ body {
   font-weight: 900;
   text-shadow: 2px 2px 0px #000000;
 }
+/* Arranges the three lunch option cards neatly */
+.menu-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* Base style for each restaurant option card */
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 4px solid #ffffff;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #000000;
+  transition: transform 0.1s;
+}
+
+.option-card:hover {
+  transform: scale(1.03);
+}
+
+.option-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.option-subtitle {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Custom colors matching your logos */
+.bk-card {
+  background-color: #ff8c00; /* Orange bun color */
+  color: #ffffff;
+}
+
+.pizza-card {
+  background-color: #ffcc00; /* Sun yellow */
+  color: #c81010;
+}
+
+.bps-card {
+  background-color: #2e8b57; /* Fresh healthy green */
+  color: #ffffff;
+}
+
+/* Back button styling */
+.back-btn {
+  margin-top: 25px;
+  background-color: #ffffff;
+  color: #c81010;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Always hides inactive screens */
+.hidden {
+  display: none !important;
+}
