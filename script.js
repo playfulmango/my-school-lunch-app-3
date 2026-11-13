@@ -84,3 +84,48 @@ function goBackToOptions() {
   bpsMenuScreen.classList.add("hidden");
   menuSelectScreen.classList.remove("hidden");
 }
+// CART VARIABLES:
+// Array to store selected food items and number to track total price
+let cart = [];
+let totalPrice = 0;
+
+// Connect to cart HTML elements
+const cartSection = document.getElementById("cart-section");
+const cartItemsList = document.getElementById("cart-items-list");
+const cartTotalSpan = document.getElementById("cart-total");
+const checkoutFeedback = document.getElementById("checkout-feedback");
+
+// FUNCTION:
+// Adds a selected food item and its price to the cart
+function addToCart(itemName, price) {
+  cart.push({ name: itemName, price: price });
+  totalPrice += price;
+  checkoutFeedback.textContent = "";
+  cartSection.classList.remove("hidden");
+  updateCartDisplay();
+}
+
+// FUNCTION:
+// Updates the list of items and total price shown on screen
+function updateCartDisplay() {
+  cartItemsList.innerHTML = "";
+  for (let i = 0; i < cart.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = cart[i].name + " — $" + cart[i].price.toFixed(2);
+    cartItemsList.appendChild(li);
+  }
+  cartTotalSpan.textContent = totalPrice.toFixed(2);
+}
+
+// FUNCTION:
+// Completes checkout and resets the cart
+function checkoutOrder() {
+  if (cart.length === 0) {
+    checkoutFeedback.textContent = "Please add at least one item before ordering!";
+    return;
+  }
+  checkoutFeedback.textContent = "✅ Order placed! Total paid: $" + totalPrice.toFixed(2);
+  cart = [];
+  totalPrice = 0;
+  updateCartDisplay();
+}

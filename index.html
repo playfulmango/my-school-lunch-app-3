@@ -66,22 +66,41 @@
   <!-- Page 3: Burger King Menu Screen (starts hidden) -->
   <div id="bk-menu-screen" class="screen hidden">
     <h2 class="section-title">BURGER KING MENU</h2>
-    <p>Burger King menu items will go here.</p>
+    <div class="menu-items-list">
+      <button class="food-item-btn" onclick="addToCart('Whopper Meal', 8.50)">Whopper Meal — $8.50</button>
+      <button class="food-item-btn" onclick="addToCart('Chicken Nuggets (8 pc)', 4.50)">Chicken Nuggets (8 pc) — $4.50</button>
+      <button class="food-item-btn" onclick="addToCart('Medium Fries', 2.75)">Medium Fries — $2.75</button>
+    </div>
     <button class="back-btn" onclick="goBackToOptions()">← Back to Options</button>
   </div>
 
   <!-- Page 4: Sun Pizza Menu Screen (starts hidden) -->
   <div id="pizza-menu-screen" class="screen hidden">
     <h2 class="section-title">SUN PIZZA MENU</h2>
-    <p>Sun Pizza menu items will go here.</p>
+    <div class="menu-items-list">
+      <button class="food-item-btn" onclick="addToCart('Cheese Pizza Slice', 3.50)">Cheese Pizza Slice — $3.50</button>
+      <button class="food-item-btn" onclick="addToCart('Pepperoni Pizza Slice', 4.00)">Pepperoni Pizza Slice — $4.00</button>
+      <button class="food-item-btn" onclick="addToCart('Italian Sub', 7.25)">Italian Sub — $7.25</button>
+    </div>
     <button class="back-btn" onclick="goBackToOptions()">← Back to Options</button>
   </div>
 
   <!-- Page 5: BPS School Lunch Menu Screen (starts hidden) -->
   <div id="bps-menu-screen" class="screen hidden">
     <h2 class="section-title">BPS SCHOOL LUNCH MENU</h2>
-    <p>BPS Healthy Fresh items will go here.</p>
+    <div class="menu-items-list">
+      <button class="food-item-btn" onclick="addToCart('Turkey & Cheese Wrap', 3.00)">Turkey & Cheese Wrap — $3.00</button>
+      <button class="food-item-btn" onclick="addToCart('Garden Salad & Apple', 2.75)">Garden Salad & Apple — $2.75</button>
+      <button class="food-item-btn" onclick="addToCart('Chicken Pasta Bowl', 3.25)">Chicken Pasta Bowl — $3.25</button>
+    </div>
     <button class="back-btn" onclick="goBackToOptions()">← Back to Options</button>
   </div>
-</body>
-</html>
+
+  <!-- Shared Order Cart & Checkout Box (starts hidden until user opens a menu) -->
+  <div id="cart-section" class="cart-box hidden">
+    <h3>Your Lunch Order</h3>
+    <ul id="cart-items-list"></ul>
+    <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+    <button id="checkout-btn" class="checkout-button" onclick="checkoutOrder()">PLACE ORDER</button>
+    <p id="checkout-feedback" class="checkout-message"></p>
+  </div>

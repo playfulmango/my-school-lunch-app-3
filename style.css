@@ -160,3 +160,73 @@ body {
   opacity: 0.45;
   cursor: not-allowed;
 }
+/* Arranges food items inside each restaurant menu */
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 15px;
+}
+
+/* Styles each clickable food item button */
+.food-item-btn {
+  background-color: #ffffff;
+  color: #c81010;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.food-item-btn:hover {
+  background-color: #ffcc00;
+  color: #000000;
+}
+
+/* Styles the Cart & Checkout box */
+.cart-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 3px solid #ffcc00;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 20px auto;
+  max-width: 380px;
+  text-align: center;
+}
+
+.cart-box h3 {
+  color: #ffcc00;
+  margin-top: 0;
+}
+
+#cart-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.cart-total {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.checkout-button {
+  background-color: #2e8b57;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.checkout-message {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-top: 10px;
+}
