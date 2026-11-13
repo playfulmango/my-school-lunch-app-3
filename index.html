@@ -31,7 +31,32 @@
   <div id="menu-select-screen" class="screen hidden">
     <h2 class="section-title">ORDER LUNCH</h2>
     <p>Choose a menu option below:</p>
-<!-- Feedback message when a restricted menu is clicked -->
+
+    <!-- Menu Option Cards with Icons -->
+    <div class="menu-options-container">
+      <!-- Option 1: Burger King -->
+      <button id="bk-btn" class="option-card bk-card">
+        <span class="option-icon">🍔</span>
+        <span class="option-title">BURGER KING</span>
+        <span class="option-subtitle">Fast Food Burgers & Sides</span>
+      </button>
+
+      <!-- Option 2: Sun Pizza -->
+      <button id="pizza-btn" class="option-card pizza-card">
+        <span class="option-icon">🍕</span>
+        <span class="option-title">SUN PIZZA</span>
+        <span class="option-subtitle">Fresh Pizza & Subs</span>
+      </button>
+
+      <!-- Option 3: BPS School Lunch -->
+      <button id="bps-btn" class="option-card bps-card">
+        <span class="option-icon">🥗</span>
+        <span class="option-title">BPS SCHOOL LUNCH</span>
+        <span class="option-subtitle">BPSEATS • Local Healthy Fresh</span>
+      </button>
+    </div>
+
+    <!-- Feedback message when a restricted menu is clicked -->
     <p id="restriction-msg" class="restriction-warning"></p>
 
     <!-- Teacher Control Panel to block/unblock menus -->
@@ -40,11 +65,6 @@
       <label><input type="checkbox" id="block-bk"> Block Burger King</label>
       <label><input type="checkbox" id="block-pizza"> Block Sun Pizza</label>
       <label><input type="checkbox" id="block-bps"> Block BPS School Lunch</label>
-    </div>
-    <!-- Menu Option Cards placed INSIDE Page 2 so they stay hidden until ORDER HERE is clicked -->
-    <div class="menu-options-container">
-      <!-- Option 1: Burger King -->
-      <div class="menu-options-container">
     </div>
   </div> <!-- End of Page 2: menu-select-screen -->
 
@@ -89,3 +109,5 @@
     <button id="checkout-btn" class="checkout-button" onclick="checkoutOrder()">PLACE ORDER</button>
     <p id="checkout-feedback" class="checkout-message"></p>
   </div>
+</body>
+</html>
