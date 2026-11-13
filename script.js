@@ -1,26 +1,31 @@
 // VARIABLES:
-// Connect JavaScript to the HTML elements using their IDs
+// Connect JavaScript to Page 1 and Page 2 elements
 const orderBtn = document.getElementById("order-btn");
 const homeScreen = document.getElementById("home-screen");
 const menuSelectScreen = document.getElementById("menu-select-screen");
 
-// EVENT LISTENER:
-// Runs when the user clicks the "ORDER HERE" button
-orderBtn.addEventListener("click", function() {
-  // Hides Page 1 (Home Screen)
-  homeScreen.classList.add("hidden");
-
-  // Shows Page 2 (Menu Selection Screen)
-  menuSelectScreen.classList.remove("hidden");
-});
-// VARIABLES:
 // Connect to the three restaurant option buttons
-// VARIABLES:
+const bkBtn = document.getElementById("bk-btn");
+const pizzaBtn = document.getElementById("pizza-btn");
+const bpsBtn = document.getElementById("bps-btn");
+
+// Connect to the three individual menu screens
+const bkMenuScreen = document.getElementById("bk-menu-screen");
+const pizzaMenuScreen = document.getElementById("pizza-menu-screen");
+const bpsMenuScreen = document.getElementById("bps-menu-screen");
+
 // Connect to the teacher restriction checkboxes and warning text
 const blockBkCheckbox = document.getElementById("block-bk");
 const blockPizzaCheckbox = document.getElementById("block-pizza");
 const blockBpsCheckbox = document.getElementById("block-bps");
 const restrictionMsg = document.getElementById("restriction-msg");
+
+// EVENT LISTENERS:
+// Runs when the user clicks the "ORDER HERE" button
+orderBtn.addEventListener("click", function() {
+  homeScreen.classList.add("hidden");
+  menuSelectScreen.classList.remove("hidden");
+});
 
 // Update card appearance when teacher checks/unchecks a box
 blockBkCheckbox.addEventListener("change", function() {
@@ -38,7 +43,6 @@ blockBpsCheckbox.addEventListener("change", function() {
   restrictionMsg.textContent = "";
 });
 
-// EVENT LISTENERS (Updated with restriction checks):
 // Open Burger King Menu only if NOT blocked
 bkBtn.addEventListener("click", function() {
   if (blockBkCheckbox.checked) {
@@ -70,29 +74,6 @@ bpsBtn.addEventListener("click", function() {
     menuSelectScreen.classList.add("hidden");
     bpsMenuScreen.classList.remove("hidden");
   }
-});
-// Connect to the three individual menu screens
-const bkMenuScreen = document.getElementById("bk-menu-screen");
-const pizzaMenuScreen = document.getElementById("pizza-menu-screen");
-const bpsMenuScreen = document.getElementById("bps-menu-screen");
-
-// EVENT LISTENERS:
-// Open Burger King Menu
-bkBtn.addEventListener("click", function() {
-  menuSelectScreen.classList.add("hidden");
-  bkMenuScreen.classList.remove("hidden");
-});
-
-// Open Sun Pizza Menu
-pizzaBtn.addEventListener("click", function() {
-  menuSelectScreen.classList.add("hidden");
-  pizzaMenuScreen.classList.remove("hidden");
-});
-
-// Open BPS School Lunch Menu
-bpsBtn.addEventListener("click", function() {
-  menuSelectScreen.classList.add("hidden");
-  bpsMenuScreen.classList.remove("hidden");
 });
 
 // FUNCTION:
