@@ -31,7 +31,16 @@
   <div id="menu-select-screen" class="screen hidden">
     <h2 class="section-title">ORDER LUNCH</h2>
     <p>Choose a menu option below:</p>
+<!-- Feedback message when a restricted menu is clicked -->
+    <p id="restriction-msg" class="restriction-warning"></p>
 
+    <!-- Teacher Control Panel to block/unblock menus -->
+    <div class="teacher-controls">
+      <h3>Teacher Menu Restrictions</h3>
+      <label><input type="checkbox" id="block-bk"> Block Burger King</label>
+      <label><input type="checkbox" id="block-pizza"> Block Sun Pizza</label>
+      <label><input type="checkbox" id="block-bps"> Block BPS School Lunch</label>
+    </div>
     <!-- Menu Option Cards placed INSIDE Page 2 so they stay hidden until ORDER HERE is clicked -->
     <div class="menu-options-container">
       <!-- Option 1: Burger King -->
