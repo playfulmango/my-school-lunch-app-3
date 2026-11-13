@@ -230,3 +230,59 @@ body {
   font-weight: bold;
   margin-top: 10px;
 }
+/* Upgrades food buttons with a clean card feel and crisp border */
+.food-item-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 20px;
+  border: 3px solid #ffcc00;
+  border-radius: 12px;
+  box-shadow: 0 4px 0 #000000;
+  transition: transform 0.12s ease, background-color 0.15s ease;
+}
+
+.food-item-btn:hover {
+  background-color: #ffcc00;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Upgrades the Cart & Checkout box with a sleek dark card look */
+.cart-box {
+  background-color: #1a1a1a;
+  border: 3px solid #ffcc00;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 24px auto;
+  max-width: 380px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Adds clean divider lines between items in the cart */
+#cart-items-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+}
+
+/* Makes the PLACE ORDER button feel bold and clickable */
+.checkout-button {
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 4px 0 #000000;
+  transition: transform 0.1s ease;
+}
+
+.checkout-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #000000;
+}
+/* Always hides inactive screens */
+.hidden {
+  display: none !important;
+}
